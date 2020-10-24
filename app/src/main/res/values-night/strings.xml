@@ -1,11 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Clinica La Salud</string>
     <string name="logo_app">logo app</string>
     <string name="enter_email">Enter Email</string>
-    <string name="enter_password">Enter Password</string>
     <string name="log_in">Log In</string>
     <string name="empty_email">Empty Email</string>
-    <string name="empty_password">Empty Password</string>
-    <string name="warning">Error on log in</string>
+    <string name="empty_password">Password empty</string>
     <string name="log_out">Log Out</string>
 </resources>
