@@ -11,19 +11,36 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/date_and_time"
+            android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:hint="@string/date_and_time"
-            android:padding="16dp"
+            android:hint="@string/date"
+            android:padding="8dp"
             android:textColor="#333"
             android:textSize="@dimen/_18sdp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/time"
+            android:padding="8dp"
+            android:textColor="#333"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date" />
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layout_name"
@@ -34,7 +51,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:hint="@string/enter_name"
-            app:layout_constraintTop_toBottomOf="@id/date_and_time">
+            app:layout_constraintTop_toBottomOf="@id/time">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_name"
@@ -83,7 +100,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
-                android:inputType="number"
+                android:inputType="numberDecimal"
+                android:textColor="#333333"
+                android:textSize="@dimen/_18sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_phone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/enter_phone"
+            app:layout_constraintTop_toBottomOf="@id/layout_weight">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
                 android:textColor="#333333"
                 android:textSize="@dimen/_18sdp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -97,7 +135,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:hint="@string/sickness"
-            app:layout_constraintTop_toBottomOf="@id/layout_weight">
+            app:layout_constraintTop_toBottomOf="@id/layout_phone">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_sickness"
@@ -214,19 +252,33 @@
                 android:textSize="@dimen/_18sdp" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <CheckBox
+            android:id="@+id/checkbox_confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:onClick="onCheckClicked"
+            android:text="@string/dossier_done"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_treatment" />
+
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create_log"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="32dp"
-            android:onClick="createDossier"
             android:padding="16dp"
             android:text="@string/create_log"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
             android:textSize="@dimen/_14sdp"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_treatment" />
+            app:layout_constraintTop_toBottomOf="@id/checkbox_confirmation" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

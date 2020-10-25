@@ -1,7 +1,8 @@
 package com.example.clinicalasalud.models;
 
 public class Dossiers {
-    private String datetime;
+    private String date;
+    private String time;
     private String name;
     private int age;
     private float weight;
@@ -13,8 +14,12 @@ public class Dossiers {
     private String diagnose;
     private String treatment;
 
-    public Dossiers(String datetime, String name, int age, float weight, String phone, String sickness, String history, String backgroundRecord, String physicalTest, String diagnose, String treatment) {
-        this.datetime = datetime;
+    public Dossiers() {
+    }
+
+    public Dossiers(String date, String time, String name, int age, float weight, String phone, String sickness, String history, String backgroundRecord, String physicalTest, String diagnose, String treatment) {
+        this.date = date;
+        this.time = time;
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -27,12 +32,20 @@ public class Dossiers {
         this.treatment = treatment;
     }
 
-    public String getDatetime() {
-        return datetime;
+    public String getDate() {
+        return date;
     }
 
-    public void setDatetime(String datetime) {
-        this.datetime = datetime;
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getName() {

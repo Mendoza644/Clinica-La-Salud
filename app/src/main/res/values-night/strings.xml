@@ -12,4 +12,8 @@
     <string name="enter_weight">Enter Weight</string>
     <string name="sickness">Sickness</string>
     <string name="create_log">Crear Expediente</string>
+    <string name="time">00:00</string>
+    <string name="date">dd/mm/AAAA</string>
+    <string name="enter_phone">Teléfono</string>
+    <string name="dossier_done">Expediente Listo</string>
 </resources>
