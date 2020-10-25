@@ -1,11 +1,23 @@
 <resources>
     <string name="app_name">Clinica La Salud</string>
     <string name="logo_app">logo app</string>
-    <string name="enter_email">Enter Email</string>
-    <string name="enter_password">Enter Password</string>
-    <string name="log_in">Log In</string>
-    <string name="empty_email">Empty Email</string>
-    <string name="empty_password">Empty Password</string>
-    <string name="warning">Error on log in</string>
-    <string name="log_out">Log Out</string>
+    <string name="enter_email">Correo Electrónico</string>
+    <string name="enter_password">Contraseña</string>
+    <string name="log_in">Iniciar Sesión</string>
+    <string name="empty_email">Correo electrónico requerido</string>
+    <string name="empty_password">Contraseña requerida</string>
+    <string name="warning">Intenta de nuevo.</string>
+    <string name="log_out">Cerrar Sesión</string>
+    <string name="add_logs">Añadir Registros</string>
+    <string name="date_and_time">Fecha y Hora</string>
+    <string name="enter_name">Nombre del paciente</string>
+    <string name="enter_age">Edad</string>
+    <string name="enter_weight">Peso (kg)</string>
+    <string name="sickness">Consulta por</string>
+    <string name="history">Historia Clínica</string>
+    <string name="backgroundRecord">Antecedentes Personales</string>
+    <string name="physicalTest">Examen Físico</string>
+    <string name="diagnose">Diagnóstico</string>
+    <string name="treatment">Plan</string>
+    <string name="create_log">Crear Expediente</string>
 </resources>

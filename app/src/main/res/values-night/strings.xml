@@ -6,4 +6,10 @@
     <string name="empty_email">Empty Email</string>
     <string name="empty_password">Password empty</string>
     <string name="log_out">Log Out</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_age">Enter Age</string>
+    <string name="enter_weight">Enter Weight</string>
+    <string name="sickness">Sickness</string>
+    <string name="create_log">Crear Expediente</string>
 </resources>

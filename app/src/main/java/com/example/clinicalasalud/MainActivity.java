@@ -1,12 +1,13 @@
 package com.example.clinicalasalud;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -23,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void createANewLog(View view) {
+        Intent intent = new Intent(this, CreateLog.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -33,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_log_out) {
-           firebaseAuth.signOut();
+            firebaseAuth.signOut();
             Intent intent = new Intent(this, LoginScreen.class);
             startActivity(intent);
             finish();
