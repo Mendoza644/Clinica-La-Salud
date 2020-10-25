@@ -142,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
-                android:inputType="textCapSentences"
+                android:inputType="textCapSentences|textMultiLine"
                 android:textColor="#333333"
                 android:textSize="@dimen/_18sdp" />
         </com.google.android.material.textfield.TextInputLayout>
