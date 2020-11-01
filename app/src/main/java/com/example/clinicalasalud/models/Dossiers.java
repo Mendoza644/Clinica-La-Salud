@@ -1,11 +1,14 @@
 package com.example.clinicalasalud.models;
 
-public class Dossiers {
+import java.io.Serializable;
+
+public class Dossiers implements Serializable {
     private String date;
     private String time;
     private String name;
-    private int age;
-    private float weight;
+    private String age;
+    private String height;
+    private String weight;
     private String phone;
     private String sickness;
     private String history;
@@ -14,14 +17,12 @@ public class Dossiers {
     private String diagnose;
     private String treatment;
 
-    public Dossiers() {
-    }
-
-    public Dossiers(String date, String time, String name, int age, float weight, String phone, String sickness, String history, String backgroundRecord, String physicalTest, String diagnose, String treatment) {
+    public Dossiers(String date, String time, String name, String age, String height, String weight, String phone, String sickness, String history, String backgroundRecord, String physicalTest, String diagnose, String treatment) {
         this.date = date;
         this.time = time;
         this.name = name;
         this.age = age;
+        this.height = height;
         this.weight = weight;
         this.phone = phone;
         this.sickness = sickness;
@@ -56,19 +57,27 @@ public class Dossiers {
         this.name = name;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
-    public float getWeight() {
+    public String getHeight() {
+        return height;
+    }
+
+    public void setHeight(String height) {
+        this.height = height;
+    }
+
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
@@ -127,4 +136,8 @@ public class Dossiers {
     public void setTreatment(String treatment) {
         this.treatment = treatment;
     }
-}
+
+    public Dossiers() {
+    }
+
+   }

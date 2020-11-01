@@ -16,4 +16,6 @@
     <string name="date">dd/mm/AAAA</string>
     <string name="enter_phone">Teléfono</string>
     <string name="dossier_done">Expediente Listo</string>
+    <string name="height">Altura (m)</string>
+    <string name="update_log_btn">Actualizar Expediente</string>
 </resources>

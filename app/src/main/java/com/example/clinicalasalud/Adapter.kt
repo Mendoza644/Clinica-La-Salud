@@ -1,6 +1,7 @@
 package com.example.clinicalasalud
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,12 @@ class Adapter(private val dossiersArrayList: ArrayList<Dossiers>, private val co
         val dossiers = dossiersArrayList[position]
         holder.itemName.text = dossiers.name
         holder.itemAge.text = dossiers.age.toString()
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, UpdateLog::class.java)
+            intent.putExtra("dossier", dossiers)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -28,6 +35,5 @@ class Adapter(private val dossiersArrayList: ArrayList<Dossiers>, private val co
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var itemName: MaterialTextView = itemView.findViewById(R.id.item_name_rv)
         var itemAge: MaterialTextView = itemView.findViewById(R.id.item_age_rv)
-
     }
 }

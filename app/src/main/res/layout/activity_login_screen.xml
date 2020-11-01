@@ -45,7 +45,6 @@
             android:layout_width="match_parent"
             android:textSize="@dimen/_16sdp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
             android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -70,7 +69,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/_16sdp"
-            android:layout_margin="8dp"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -84,7 +82,7 @@
         android:layout_margin="32dp"
         android:id="@+id/btn_log_in"
         android:padding="16dp"
-        android:onClick="makeLogin"
+        android:visibility="invisible"
         android:backgroundTint="@color/buttonColor"
         android:textSize="@dimen/_14sdp"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Button"

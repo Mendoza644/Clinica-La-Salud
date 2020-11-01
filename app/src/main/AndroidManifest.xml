@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ClinicaLaSalud">
-        <activity android:name=".CreateLog"></activity>
+        <activity
+            android:name=".UpdateLog"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CreateLog"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".LoginScreen"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +26,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.ClinicaLaSalud" />
+            android:theme="@style/Theme.ClinicaLaSalud"
+            android:windowSoftInputMode="stateHidden" />
     </application>
 
 </manifest>
