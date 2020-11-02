@@ -23,23 +23,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/enter_name"
-                android:textSize="14sp" />
+                android:textColor="#333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/item_name_rv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#333"
                 android:textSize="@dimen/_18sdp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/enter_age" />
+                android:text="@string/enter_age"
+                android:textColor="#333"
+                android:textStyle="bold" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/item_age_rv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="#333"
                 android:textSize="@dimen/_18sdp" />
         </LinearLayout>
 

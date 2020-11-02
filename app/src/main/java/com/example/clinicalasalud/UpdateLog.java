@@ -144,7 +144,7 @@ public class UpdateLog extends AppCompatActivity implements DatePickerDialog.OnD
         firebaseFirestore.collection("Dossiers")
                 .document(name)
                 .set(dossiers)
-                .addOnSuccessListener(documentReference -> Toast.makeText(this, "Document Updated.", Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Log.w("ErrorInserting", "Error adding document.", e));
+                .addOnSuccessListener(documentReference -> Toast.makeText(this, getResources().getString(R.string.updated_dossier), Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Log.w("ErrorInserting", "Error adding document.", e));
         finish();
     }
 

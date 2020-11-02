@@ -28,7 +28,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_baseline_add_24" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_logo_svg" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/app/src/main/res/drawable/logo_svg.svg" />
                           </map>
                         </option>
                       </PersistentState>

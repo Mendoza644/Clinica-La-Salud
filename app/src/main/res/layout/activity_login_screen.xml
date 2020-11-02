@@ -10,10 +10,10 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
         android:contentDescription="@string/logo_app"
-        android:scaleType="fitXY"
-        android:src="@drawable/clinicalogo"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_logo_svg"
         app:layout_constraintBottom_toTopOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +44,7 @@
             android:id="@+id/input_email"
             android:layout_width="match_parent"
             android:textSize="@dimen/_16sdp"
+            android:textColor="#333"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
 
@@ -69,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/_16sdp"
+            android:textColor="#333"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>

@@ -26,4 +26,7 @@
     <string name="dossier_done">Expediente Listo</string>
     <string name="height">Altura (m)</string>
     <string name="update_log_btn">Actualizar Expediente</string>
+    <string name="updated_dossier">Expediente actualizado.</string>
+    <string name="added_dossier">Expediente añadido.</string>
+    <string name="refresh_list">Actualizar</string>
 </resources>

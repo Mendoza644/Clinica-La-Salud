@@ -5,12 +5,12 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.clinicalasalud.models.Dossiers
 import com.google.android.gms.tasks.Task
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QuerySnapshot
@@ -30,9 +30,16 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.rv_logs)
         layoutManager = LinearLayoutManager(this)
         getDataFromDatabase()
+
+        val fab: FloatingActionButton = findViewById(R.id.fab)
+        fab.setOnClickListener {
+            val intent = Intent(this, CreateLog::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun getDataFromDatabase() {
+        dossiersArrayList.clear()
         firebaseFirestore!!.collection("Dossiers")
                 .get()
                 .addOnCompleteListener { task: Task<QuerySnapshot> ->
@@ -55,10 +62,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = mAdapter
     }
 
-    fun createANewLog(view: View?) {
-        val intent = Intent(this, CreateLog::class.java)
-        startActivity(intent)
-    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater
@@ -73,6 +76,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
             return true
+        } else if (item.itemId == R.id.action_refresh) {
+            dossiersArrayList.clear()
+            getDataFromDatabase()
         }
         return super.onOptionsItemSelected(item)
     }

@@ -10,6 +10,7 @@ import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
@@ -45,6 +46,9 @@ public class CreateLog extends AppCompatActivity implements DatePickerDialog.OnD
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_log);
+
+        ActionBar actionBar = getSupportActionBar();
+        Objects.requireNonNull(actionBar).setDisplayHomeAsUpEnabled(true);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -121,7 +125,7 @@ public class CreateLog extends AppCompatActivity implements DatePickerDialog.OnD
         firebaseFirestore.collection("Dossiers")
                 .document(name)
                 .set(dossiers)
-                .addOnSuccessListener(documentReference -> Toast.makeText(this, "Document added.", Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Log.w("ErrorInserting", "Error adding document.", e));
+                .addOnSuccessListener(documentReference -> Toast.makeText(this, getResources().getString(R.string.added_dossier), Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Log.w("ErrorInserting", "Error adding document.", e));
         finish();
     }
 
@@ -139,5 +143,11 @@ public class CreateLog extends AppCompatActivity implements DatePickerDialog.OnD
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         currentTime = hourOfDay + ":" + minute;
         time.setText(currentTime);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }
